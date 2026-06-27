@@ -11,6 +11,7 @@ interface Particle {
   opacity: number;
   speedOfTwinkle: number;
   twinkleDirection: number;
+  drift: number;
 }
 
 export default function ParticleBackground() {
@@ -29,84 +30,118 @@ export default function ParticleBackground() {
     let particles: Particle[] = [];
     let width = 0;
     let height = 0;
+    let frame = 0;
 
-    // Helper to generate a random number in a range
     const randomRange = (min: number, max: number) => Math.random() * (max - min) + min;
 
-    // Initialize particles
     const initParticles = (w: number, h: number) => {
-      // Density based on canvas area: a balanced minimal count
-      const density = Math.min(Math.floor((w * h) / 32000), 45);
-      const count = Math.max(12, density);
-      
+      const count = Math.max(18, Math.min(Math.floor((w * h) / 18000), 90));
       const newParticles: Particle[] = [];
+
       for (let i = 0; i < count; i++) {
-        const isOrange = Math.random() > 0.65; // ~35% orange, ~65% white
-        const baseOpacity = randomRange(0.12, 0.42);
+        const isOrange = Math.random() > 0.68;
+        const baseOpacity = randomRange(0.14, 0.4);
         newParticles.push({
           x: randomRange(0, w),
           y: randomRange(0, h),
-          vx: randomRange(-0.12, 0.12),
-          vy: randomRange(-0.12, 0.12),
-          radius: randomRange(0.8, 2.0),
+          vx: randomRange(-0.16, 0.16),
+          vy: randomRange(-0.16, 0.16),
+          radius: randomRange(0.8, 2.6),
           color: isOrange ? '255, 138, 0' : '255, 255, 255',
           baseOpacity,
           opacity: baseOpacity,
-          speedOfTwinkle: randomRange(0.003, 0.012),
+          speedOfTwinkle: randomRange(0.0025, 0.009),
           twinkleDirection: Math.random() > 0.5 ? 1 : -1,
+          drift: randomRange(0.08, 0.24),
         });
       }
+
       particles = newParticles;
     };
 
-    // Resize handler using ResizeObserver
     const resizeObserver = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const { width: w, height: h } = entry.contentRect;
         width = w;
         height = h;
-        canvas.width = w;
-        canvas.height = h;
+        canvas.width = w * window.devicePixelRatio;
+        canvas.height = h * window.devicePixelRatio;
+        canvas.style.width = `${w}px`;
+        canvas.style.height = `${h}px`;
+        ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
         initParticles(w, h);
       }
     });
 
     resizeObserver.observe(container);
 
-    // Animation loop
-    const animate = () => {
-      ctx.clearRect(0, 0, width, height);
+    const drawGlow = (p: Particle) => {
+      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 7);
+      gradient.addColorStop(0, `rgba(${p.color}, ${p.opacity * 1.4})`);
+      gradient.addColorStop(0.4, `rgba(${p.color}, ${p.opacity * 0.24})`);
+      gradient.addColorStop(1, `rgba(${p.color}, 0)`);
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius * 7, 0, Math.PI * 2);
+      ctx.fill();
+    };
 
+    const drawConnections = () => {
+      const threshold = 96;
       for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
+        for (let j = i + 1; j < particles.length; j++) {
+          const a = particles[i];
+          const b = particles[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < threshold) {
+            const alpha = (1 - dist / threshold) * 0.14;
+            ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+    };
 
-        // Move particle
-        p.x += p.vx;
-        p.y += p.vy;
+    const animate = () => {
+      frame += 1;
+      ctx.clearRect(0, 0, width, height);
+      ctx.globalCompositeOperation = 'lighter';
 
-        // Wrap boundaries
-        if (p.x < 0) p.x = width;
-        if (p.x > width) p.x = 0;
-        if (p.y < 0) p.y = height;
-        if (p.y > height) p.y = 0;
+      const driftStrength = Math.sin(frame * 0.0025) * 0.05;
 
-        // Twinkle (slow opacity oscillation)
+      for (const p of particles) {
+        p.x += p.vx + Math.sin(p.y * 0.01 + frame * 0.002) * p.drift + driftStrength;
+        p.y += p.vy + Math.cos(p.x * 0.01 + frame * 0.002) * p.drift * 0.45;
+
+        if (p.x < -10) p.x = width + 10;
+        if (p.x > width + 10) p.x = -10;
+        if (p.y < -10) p.y = height + 10;
+        if (p.y > height + 10) p.y = -10;
+
         p.opacity += p.twinkleDirection * p.speedOfTwinkle;
-        if (p.opacity > p.baseOpacity * 1.3) {
-          p.opacity = p.baseOpacity * 1.3;
+        if (p.opacity > p.baseOpacity * 1.35) {
+          p.opacity = p.baseOpacity * 1.35;
           p.twinkleDirection = -1;
-        } else if (p.opacity < p.baseOpacity * 0.3) {
-          p.opacity = p.baseOpacity * 0.3;
+        } else if (p.opacity < p.baseOpacity * 0.25) {
+          p.opacity = p.baseOpacity * 0.25;
           p.twinkleDirection = 1;
         }
 
-        // Draw particle
+        drawGlow(p);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${p.color}, ${p.opacity})`;
         ctx.fill();
       }
 
+      ctx.globalCompositeOperation = 'source-over';
+      drawConnections();
       animationFrameId = requestAnimationFrame(animate);
     };
 
