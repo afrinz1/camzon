@@ -6,7 +6,6 @@ A clean and minimal landing page for Camzon, showcasing a modern brand experienc
 
 - Modern minimal UI
 - Responsive design
-- Custom branding and favicon
 - Optimized for performance
 
 ## Run Locally
