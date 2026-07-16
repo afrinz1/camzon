@@ -24,6 +24,7 @@ import { ArrowUp } from 'lucide-react';
 export default function App() {
   const [route, setRoute] = useState<RouteState>({ page: 'home' });
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Compile products from the ten distinct collection files, adding the collection tag dynamically
   const products: Product[] = [
@@ -48,12 +49,34 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => setIsLoading(false), 700);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <div className="flex min-h-screen flex-col bg-brand-black text-white relative">
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-black"
+          >
+            <div className="flex flex-col items-center gap-4 text-center">
+              <div className="h-10 w-10 rounded-full border border-brand-orange/30 border-t-brand-orange animate-spin" />
+              <p className="text-[10px] uppercase tracking-[0.3em] text-brand-light-gray/70">
+                Loading CAMZON
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {/* Upper Subtle Ambient Background Light (Home page only) */}
       {route.page === 'home' && (
         <div className="pointer-events-none absolute top-0 left-1/2 h-500px w-full max-w-7xl -translate-x-1/2 bg-linear-to-b from-brand-orange/5 to-transparent blur-[120px] z-0" />
