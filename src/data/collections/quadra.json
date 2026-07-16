@@ -1,0 +1,38 @@
+[
+  {
+    "id": 601,
+    "slug": "quadra-1",
+    "name": "Quadra Product 1",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080792/c1a301d9-aa3c-4ca4-bdb6-62dc2296fc60_ljgwvn.png"
+  },
+  {
+    "id": 602,
+    "slug": "quadra-2",
+    "name": "Quadra Product 2",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080788/a489f2c6-5d61-41d5-b318-5648c578cbfc_kxlldf.png"
+  },
+  {
+    "id": 603,
+    "slug": "quadra-3",
+    "name": "Quadra Product 3",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080788/b333a29e-62bf-4112-a40c-aebffff2cdff_epis92.png"
+  },
+  {
+    "id": 604,
+    "slug": "quadra-4",
+    "name": "Quadra Product 4",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080787/a759003f-718e-40c6-b901-70c5edeeb2f5_hfvgx5.png"
+  },
+  {
+    "id": 605,
+    "slug": "quadra-5",
+    "name": "Quadra Product 5",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080787/fc00e33a-9dd4-4380-9491-77edd80be8b3_xucmww.png"
+  },
+  {
+    "id": 606,
+    "slug": "quadra-6",
+    "name": "Quadra Product 6",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080764/8609f769-1062-412f-ba64-7306e19caea4_zq6xkm.png"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "Premium Bathroom Fittings Catalog",
+  "description": "A premium, architectural showcase catalog for luxury sanitaryware and bathroom fittings, featuring faucets, showers, wash basins, kitchen sinks, accessories, bathtubs, and sanitaryware.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

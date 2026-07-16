@@ -1,0 +1,56 @@
+[
+  {
+    "id": 501,
+    "slug": "facet-1",
+    "name": "Facet Product 1",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080796/7c864177-89b6-4290-a7b1-dbd0bc0abda9_biwcrn.png"
+  },
+  {
+    "id": 502,
+    "slug": "facet-2",
+    "name": "Facet Product 2",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/dc9faed0-9b6c-4cf8-a319-429b4e6fffcd_ttkonm.png"
+  },
+  {
+    "id": 503,
+    "slug": "facet-3",
+    "name": "Facet Product 3",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080777/dd7142ea-5d5f-43f9-8812-b3faf233d52a_twyul3.png"
+  },
+  {
+    "id": 504,
+    "slug": "facet-4",
+    "name": "Facet Product 4",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080773/59a20a26-371e-4ea0-9e22-0e013d345af6_uf1qyq.png"
+  },
+  {
+    "id": 505,
+    "slug": "facet-5",
+    "name": "Facet Product 5",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080772/20c46807-c910-4ff3-9d23-ca7350ef2888_ysjscy.png"
+  },
+  {
+    "id": 506,
+    "slug": "facet-6",
+    "name": "Facet Product 6",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080770/69557d7b-5620-4adb-bffd-d1ca2d5b4d9e_ja8ywx.png"
+  },
+  {
+    "id": 507,
+    "slug": "facet-7",
+    "name": "Facet Product 7",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080769/df9305e0-3d59-4457-bc67-3efd49e2531d_fnh4bm.png"
+  },
+  {
+    "id": 508,
+    "slug": "facet-8",
+    "name": "Facet Product 8",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080768/dd7142ea-5d5f-43f9-8812-b3faf233d52a_1_h0kbaf.png"
+  },
+  {
+    "id": 509,
+    "slug": "facet-9",
+    "name": "Facet Product 9",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080763/dfa9633e-0fd7-4ff3-8f79-5cc6d1fa9570_wsoljz.png"
+  }
+]

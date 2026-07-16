@@ -1,0 +1,50 @@
+[
+  {
+    "id": 801,
+    "slug": "ridge-1",
+    "name": "Ridge Product 1",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080793/7c564fbd-58d6-4854-9478-fc541ee569ee_que8hb.png"
+  },
+  {
+    "id": 802,
+    "slug": "ridge-2",
+    "name": "Ridge Product 2",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080782/45ed0add-6d03-405f-87b5-c1da92da826f_a21uxc.png"
+  },
+  {
+    "id": 803,
+    "slug": "ridge-3",
+    "name": "Ridge Product 3",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080781/6467f04c-7720-45cc-9d17-517872475adb_rlbsla.png"
+  },
+  {
+    "id": 804,
+    "slug": "ridge-4",
+    "name": "Ridge Product 4",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080781/8ad74716-c414-4e90-a64a-6f9141bc09eb_mcquoe.png"
+  },
+  {
+    "id": 805,
+    "slug": "ridge-5",
+    "name": "Ridge Product 5",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/a0d8edb9-1d13-4fe4-92cf-e83d425efcce_u8xzna.png"
+  },
+  {
+    "id": 806,
+    "slug": "ridge-6",
+    "name": "Ridge Product 6",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/9d686cc3-437d-44c2-b50f-ffa7535477a1_nto6iz.png"
+  },
+  {
+    "id": 807,
+    "slug": "ridge-7",
+    "name": "Ridge Product 7",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080775/87d77bd7-7ae6-413c-8262-9da291beef72_ahsgzn.png"
+  },
+  {
+    "id": 808,
+    "slug": "ridge-8",
+    "name": "Ridge Product 8",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080770/2692709f-580a-40ef-8f93-2ea4f495de83_csn85u.png"
+  }
+]

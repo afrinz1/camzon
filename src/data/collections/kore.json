@@ -1,0 +1,116 @@
+[
+  {
+    "id": 101,
+    "slug": "kore-1",
+    "name": "Kore Product 1",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080784/1365a57a-fc71-421f-90b3-2612cf28245f_kflg1i.png"
+  },
+  {
+    "id": 102,
+    "slug": "kore-2",
+    "name": "Kore Product 2",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080783/a9f855e9-5556-4193-92f7-ba4049d7d5a0_qit7eu.png"
+  },
+  {
+    "id": 103,
+    "slug": "kore-3",
+    "name": "Kore Product 3",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080782/0f34e205-71f7-48bb-ac48-c785430d0c0c_m5hfcs.png"
+  },
+  {
+    "id": 104,
+    "slug": "kore-4",
+    "name": "Kore Product 4",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/faa72630-b6b9-4fb5-986e-b20ff560e3e9_iqtbzv.png"
+  },
+  {
+    "id": 105,
+    "slug": "kore-5",
+    "name": "Kore Product 5",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/4dfaac7e-b069-40c6-a38b-d739b1aafc7e_hoicwr.png"
+  },
+  {
+    "id": 106,
+    "slug": "kore-6",
+    "name": "Kore Product 6",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080780/2d5bf046-5b7d-4c3a-a9a4-2df76be40a1d_eglpua.png"
+  },
+  {
+    "id": 107,
+    "slug": "kore-7",
+    "name": "Kore Product 7",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080779/88b21e87-1f33-44dd-9882-4599f44a2eac_ujreni.png"
+  },
+  {
+    "id": 108,
+    "slug": "kore-8",
+    "name": "Kore Product 8",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080779/c6efdf56-fbde-4fd0-b577-27cd8973b8cc_cpimeq.png"
+  },
+  {
+    "id": 109,
+    "slug": "kore-9",
+    "name": "Kore Product 9",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080778/83e1ca6d-0b13-4dcf-a2f6-d2b5d9bdf172_x6jxva.png"
+  },
+  {
+    "id": 110,
+    "slug": "kore-10",
+    "name": "Kore Product 10",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080777/2d181c9c-ecb2-4959-941c-52416ddc7894_p38fpr.png"
+  },
+  {
+    "id": 111,
+    "slug": "kore-11",
+    "name": "Kore Product 11",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080776/c6c922bd-07f5-4b0b-836a-2a036f50aa30_cguksk.png"
+  },
+  {
+    "id": 112,
+    "slug": "kore-12",
+    "name": "Kore Product 12",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080775/b94c698a-8e3f-4aa7-a28f-c2a0e614fb76_x25ufr.png"
+  },
+  {
+    "id": 113,
+    "slug": "kore-13",
+    "name": "Kore Product 13",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080774/42002247-4495-4b98-8e31-5d225a83f6d7_dwbpj3.png"
+  },
+  {
+    "id": 114,
+    "slug": "kore-14",
+    "name": "Kore Product 14",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080773/a2f73c81-3723-4d6e-83b6-a5e683f7c97b_dfs2td.png"
+  },
+  {
+    "id": 115,
+    "slug": "kore-15",
+    "name": "Kore Product 15",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080773/544c234b-5e59-4835-8fbf-9a61afce2965_jd7rfv.png"
+  },
+  {
+    "id": 116,
+    "slug": "kore-16",
+    "name": "Kore Product 16",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080770/6ebd80c5-ffce-4bad-a6ea-b03f105ec065_xoklw1.png"
+  },
+  {
+    "id": 117,
+    "slug": "kore-17",
+    "name": "Kore Product 17",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080769/39a1d48f-56b6-4007-beda-cecd216263e7_zijtzo.png"
+  },
+  {
+    "id": 118,
+    "slug": "kore-18",
+    "name": "Kore Product 18",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080769/957467d2-3123-4693-8bc6-6c7b9e5a5614_t8rywu.png"
+  },
+  {
+    "id": 119,
+    "slug": "kore-19",
+    "name": "Kore Product 19",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080764/05396004-b4b3-4d88-96c8-4e04cda990b0_q7qbxc.png"
+  }
+]

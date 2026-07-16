@@ -1,0 +1,20 @@
+[
+  {
+    "id": 901,
+    "slug": "deck-1",
+    "name": "Deck Product 1",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080783/1ca5ac5f-7fc8-4cff-9869-7b12dd5a42db_w6se0y.png"
+  },
+  {
+    "id": 902,
+    "slug": "deck-2",
+    "name": "Deck Product 2",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080782/a74cba08-6ef0-4914-abcf-18fddc85bf7a_qjt573.png"
+  },
+  {
+    "id": 903,
+    "slug": "deck-3",
+    "name": "Deck Product 3",
+    "image": "https://res.cloudinary.com/dz3sbdyps/image/upload/f_auto,q_auto,w_auto/v1784080777/084ac38b-8d9d-458a-bae0-96fb037bf854_ofizim.png"
+  }
+]
