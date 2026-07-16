@@ -12,7 +12,11 @@ export default function Hero({ onExploreClick }: HeroProps) {
       <div className="absolute inset-0 z-0 select-none">
         <img
           src="/src/assets/images/bathroom_hero_1783997870328.jpg"
-          alt="Premium Luxury Bathroom Fitting"
+          alt="Luxury CAMZON bathroom fitting displayed in a modern interior"
+          width={1600}
+          height={1000}
+          loading="eager"
+          fetchPriority="high"
           className="h-full w-full object-cover opacity-45 filter brightness-75 saturate-50 transition-all duration-1000"
           referrerPolicy="no-referrer"
         />

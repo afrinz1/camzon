@@ -109,7 +109,11 @@ export default function CollectionCards({ onCategorySelect, products }: Collecti
                 <div className="absolute inset-0 z-0">
                   <img
                     src={imageSrc}
-                    alt={col.name}
+                    alt={`${col.name} collection showcase`}
+                    width={900}
+                    height={600}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover opacity-50 saturate-50 transition-all duration-700 ease-out group-hover:scale-105 group-hover:opacity-60 group-hover:saturate-100"
                     referrerPolicy="no-referrer"
                   />

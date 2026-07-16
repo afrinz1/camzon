@@ -35,6 +35,8 @@ export default function Header({ route, setRoute }: HeaderProps) {
                   id={`nav-${item.label.toLowerCase()}`}
                   key={item.label}
                   onClick={() => handleNavigate(item.view)}
+                  aria-label={`Go to ${item.label}`}
+                  aria-current={isActive ? 'page' : undefined}
                   className="relative py-1.5 text-xs font-semibold tracking-[0.15em] uppercase transition-colors"
                 >
                   <span className={isActive ? 'text-brand-orange' : 'text-brand-light-gray hover:text-white'}>
@@ -58,6 +60,7 @@ export default function Header({ route, setRoute }: HeaderProps) {
           <button
             id="logo-btn"
             onClick={() => handleNavigate('home')}
+            aria-label="Go to the CAMZON home page"
             className="flex items-center justify-center text-center transition-transform hover:opacity-90 active:scale-98"
           >
             <img
@@ -84,6 +87,7 @@ export default function Header({ route, setRoute }: HeaderProps) {
           <button
             id="mobile-menu-toggle"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             className="flex h-8 w-8 items-center justify-center border border-brand-border rounded-lg text-white hover:border-white/20 hover:text-brand-orange md:hidden"
           >
             {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}

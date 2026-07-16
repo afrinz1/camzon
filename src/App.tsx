@@ -58,6 +58,38 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const pageTitle = route.page === 'catalog'
+    ? `${route.selectedCategory ? `${route.selectedCategory} Collection` : 'Catalog'} | CAMZON`
+    : 'CAMZON | Premium Bathware for Modern Living';
+
+  const pageDescription = route.page === 'catalog'
+    ? `Explore CAMZON luxury bathware and premium bathroom fittings in the ${route.selectedCategory ? route.selectedCategory.toLowerCase() : 'full'} collection.`
+    : 'Discover premium bathware, luxury bathroom fittings, and sculptural fixtures by CAMZON for modern living.';
+
+  useEffect(() => {
+    document.title = pageTitle;
+
+    const descriptionTag = document.querySelector('meta[name="description"]');
+    if (descriptionTag) {
+      descriptionTag.setAttribute('content', pageDescription);
+    }
+
+    const ogTitleTag = document.querySelector('meta[property="og:title"]');
+    if (ogTitleTag) {
+      ogTitleTag.setAttribute('content', pageTitle);
+    }
+
+    const ogDescriptionTag = document.querySelector('meta[property="og:description"]');
+    if (ogDescriptionTag) {
+      ogDescriptionTag.setAttribute('content', pageDescription);
+    }
+
+    const canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (canonicalTag) {
+      canonicalTag.setAttribute('href', route.page === 'catalog' ? 'https://camzon.com/catalog' : 'https://camzon.com/');
+    }
+  }, [pageDescription, pageTitle, route.page]);
+
   return (
     <div className="flex min-h-screen flex-col bg-brand-black text-white relative">
       <AnimatePresence>
@@ -86,7 +118,7 @@ export default function App() {
       <Header route={route} setRoute={setRoute} />
 
       {/* Main Content Area */}
-      <div className="grow z-10">
+      <main id="main-content" className="grow z-10">
         <AnimatePresence mode="wait">
           {route.page === 'home' && (
             <motion.div
@@ -153,7 +185,7 @@ export default function App() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </main>
 
       {/* Footer */}
       <Footer setRoute={setRoute} />
