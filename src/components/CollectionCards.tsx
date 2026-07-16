@@ -11,61 +11,51 @@ export default function CollectionCards({ onCategorySelect, products }: Collecti
   const collections = [
     {
       name: 'KORE',
-      count: '2 Products',
       image: '/src/assets/images/faucet_gold_1783997883851.jpg',
       tagline: 'Minimalist Gold Brass Mixers',
     },
     {
       name: 'DUNE',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1620626011160-9928f1b9b630?auto=format&fit=crop&q=80&w=600',
       tagline: 'Organic Marble Vessels',
     },
     {
       name: 'DUERO',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600',
       tagline: 'Thermostatic & Kitchen Systems',
     },
     {
       name: 'DART',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=600',
       tagline: 'Sharp Angular Masterpieces',
     },
     {
       name: 'FACET',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1521485950395-bcfb8fc9bd06?auto=format&fit=crop&q=80&w=600',
       tagline: 'Geometric Luxury Fillers',
     },
     {
       name: 'QUADRA',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=600',
       tagline: 'Pure Cubist Sanitaryware',
     },
     {
       name: 'ARNO',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1502005229762-fc1b2b812ca5?auto=format&fit=crop&q=80&w=600',
       tagline: 'Intelligent Hygienic Suites',
     },
     {
       name: 'RIDGE',
-      count: '2 Products',
       image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600',
       tagline: 'Ribbed Tactile Craftsmanship',
     },
     {
       name: 'DECK',
-      count: '2 Products',
       image: '/src/assets/images/bathtub_luxury_1783997908810.jpg',
       tagline: 'Freestanding Stone Soakers',
     },
     {
       name: 'SHOWERS',
-      count: '2 Products',
       image: '/src/assets/images/shower_rain_1783997896550.jpg',
       tagline: 'Air-Boost Overheads & Columns',
     },
@@ -94,6 +84,10 @@ export default function CollectionCards({ onCategorySelect, products }: Collecti
           {collections.map((col, index) => {
             // Give the first and last cards a double-span layout on desktop for elegant asymmetry
             const isLargeSpan = index === 0 || index === 5;
+            const collectionProductCount = products.filter(
+              (p) => p.collection.toUpperCase() === col.name.toUpperCase()
+            ).length;
+            const countLabel = `${collectionProductCount} ${collectionProductCount === 1 ? 'Product' : 'Products'}`;
             
             // Prefer the first product image from the products list for this collection
             const productImage = products.find((p) => p.collection.toUpperCase() === col.name.toUpperCase())?.image;
@@ -128,7 +122,7 @@ export default function CollectionCards({ onCategorySelect, products }: Collecti
                   {/* Top line */}
                   <div className="flex items-center justify-between">
                     <span className="font-sans text-[10px] font-medium uppercase tracking-[0.15em] text-brand-light-gray">
-                      {col.count}
+                      {countLabel}
                     </span>
                     <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-brand-black/50 backdrop-blur-sm text-white transition-all group-hover:border-white/30 group-hover:text-brand-orange">
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
